@@ -1,23 +1,25 @@
+import * as S from '../style';
+
 export default function PlayList() {
   return (
-    <div className="sidebar__block">
-        <div className="sidebar__list">
-            <div className="sidebar__item">
-                <a className="sidebar__link" href="https://">
-                    <img className="sidebar__img" src="img/playlist01.png" alt="day's playlist"/>
-                </a>
-            </div>
-            <div className="sidebar__item">
-                <a className="sidebar__link" href="https://">
-                    <img className="sidebar__img" src="img/playlist02.png" alt="day's playlist"/>
-                </a>
-            </div>
-            <div className="sidebar__item">
-                <a className="sidebar__link" href="https://">
-                    <img className="sidebar__img" src="img/playlist03.png" alt="day's playlist"/>
-                </a>
-            </div>
-        </div>
-    </div>
+    <S.SidebarBlock>
+        <S.SidebarList>
+            <S.SidebarItem>
+                <S.SidebarLink href="https://">
+                    <S.SidebarImage src="img/playlist01.png" alt="day's playlist"/>
+                </S.SidebarLink>
+            </S.SidebarItem>
+            <S.SidebarItem>
+                <S.SidebarLink href="https://">
+                    <S.SidebarImage src="img/playlist02.png" alt="day's playlist"/>
+                </S.SidebarLink>
+            </S.SidebarItem>
+            <S.SidebarItem>
+                <S.SidebarLink href="https://">
+                    <S.SidebarImage src="img/playlist03.png" alt="day's playlist"/>
+                </S.SidebarLink>
+            </S.SidebarItem>
+        </S.SidebarList>
+    </S.SidebarBlock>
   )
 }

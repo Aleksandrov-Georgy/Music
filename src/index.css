@@ -84,20 +84,21 @@
 
 
 
-  .wrapper {
+  /* .wrapper {
     width: 100%;
     min-height: 100%;
     overflow: hidden;
     background-color: #383838;
-  }
+    /* добавлен */
+  /* } */
   
-  .container {
+  /* .container {
     max-width: 1920px;
     height: 100vh;
     margin: 0 auto;
     position: relative;
     background-color: #181818;
-  }
+  } */ */
   
   ._btn-text:hover {
     border-color: #D9B6FF;
@@ -552,7 +553,7 @@
             align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
+            /* justify-content: space-between; */
     margin-bottom: 24px;
   }
   
@@ -582,6 +583,7 @@
     height: 12px;
     fill: transparent;
     stroke: #696969;
+
   }
   
   .col01 {

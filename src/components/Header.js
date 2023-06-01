@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { IoTimeOutline } from "react-icons/io5";
 import HeaderSkeleton from "./Skeleton-loader/HeaderSkeleton";
+import * as S from '../style'
 
 export default function Header() {
 
@@ -29,85 +30,80 @@ export default function Header() {
   };
 
   return (
-    <div className="header__center">
-        <h2 className="centerblock__h2">Треки</h2>
-        <div className="centerblock__filter filter">
-            <div className="filter__title">Искать по:</div>
-            <button type="button" className="filter__button button-author _btn-text" onClick={() => buttonClick('filter')}>исполнителю</button> 
+    <S.HeaderCenter>
+        <S.HeaderCenterblockText>Треки</S.HeaderCenterblockText>
+        <S.HeaderFilterBlock>
+            <S.HeaderFilterTitle>Искать по:</S.HeaderFilterTitle>
+            <S.FilterButton type="button" onClick={() => buttonClick('filter')}>исполнителю</S.FilterButton> 
                 {filter && (
-                <div className="nav__burger">
-                    <div className="filter__menu">
-                        <a href="https://">Исполнитель 1</a>
-                        <a href="https://">Исполнитель 2</a>
-                        <a href="https://">Исполнитель 3</a>
-                        <a href="https://">Исполнитель 4</a>
-                        <a href="https://">Исполнитель 5</a>
-                        <a href="https://">Исполнитель 6</a>
-                        <a href="https://">Исполнитель 7</a>
-                        <a href="https://">Исполнитель 8</a>
-                        <a href="https://">Исполнитель 9</a>
-                        <a href="https://">Исполнитель 10</a>
-                        <a href="https://">Исполнитель 11</a>
-                    </div>
-                </div> 
+                <S.HeaderNavBurger>
+                    <S.HeaderFilterMenu>
+                        <S.FilterText href="https://">Исполнитель 1</S.FilterText>
+                        <S.FilterText href="https://">Исполнитель 2</S.FilterText>
+                        <S.FilterText href="https://">Исполнитель 3</S.FilterText>
+                        <S.FilterText href="https://">Исполнитель 4</S.FilterText>
+                        <S.FilterText href="https://">Исполнитель 5</S.FilterText>
+                        <S.FilterText href="https://">Исполнитель 6</S.FilterText>
+                        <S.FilterText href="https://">Исполнитель 7</S.FilterText>
+                        <S.FilterText href="https://">Исполнитель 8</S.FilterText>
+                        <S.FilterText href="https://">Исполнитель 9</S.FilterText>
+                        <S.FilterText href="https://">Исполнитель 10</S.FilterText>
+                        <S.FilterText href="https://">Исполнитель 11</S.FilterText>
+                    </S.HeaderFilterMenu>
+                </S.HeaderNavBurger> 
                 )}
 
-            <button type="button" className="filter__button button-year _btn-text" onClick={() => buttonClick('filterYears')}>году выпуска</button>
+            <S.FilterButton type="button" onClick={() => buttonClick('filterYears')}>году выпуска</S.FilterButton>
                     {filterYears && (
-                        <div className="nav__burger">
-                            <div className="filter-years__menu">
-                                <a href="https://">Год выпуска 1</a>
-                                <a href="https://">Год выпуска 2</a>
-                                <a href="https://">Год выпуска 3</a>
-                                <a href="https://">Год выпуска 4</a>
-                                <a href="https://">Год выпуска 5</a>
-                                <a href="https://">Год выпуска 6</a>
-                                <a href="https://">Год выпуска 7</a>
-                                <a href="https://">Год выпуска 8</a>
-                                <a href="https://">Год выпуска 9</a>
-                                <a href="https://">Год выпуска 10</a>
-                                <a href="https://">Год выпуска 11</a>
-                            </div>
-                        </div> 
+                        <S.HeaderNavBurger>
+                            <S.FilterYears>
+                                <S.FilterText href="https://">Год выпуска 1</S.FilterText>
+                                <S.FilterText href="https://">Год выпуска 2</S.FilterText>
+                                <S.FilterText href="https://">Год выпуска 3</S.FilterText>
+                                <S.FilterText href="https://">Год выпуска 4</S.FilterText>
+                                <S.FilterText href="https://">Год выпуска 5</S.FilterText>
+                                <S.FilterText href="https://">Год выпуска 6</S.FilterText>
+                                <S.FilterText href="https://">Год выпуска 7</S.FilterText>
+                                <S.FilterText href="https://">Год выпуска 8</S.FilterText>
+                                <S.FilterText href="https://">Год выпуска 9</S.FilterText>
+                                <S.FilterText href="https://">Год выпуска 10</S.FilterText>
+                                <S.FilterText href="https://">Год выпуска 11</S.FilterText>
+                            </S.FilterYears>
+                        </S.HeaderNavBurger> 
                     )}
 
-            <button type="button" className="filter__button button-genre _btn-text" onClick={() => buttonClick('filtersGerne')}>жанру</button>
+            <S.FilterButton type="button" onClick={() => buttonClick('filtersGerne')}>жанру</S.FilterButton>
                         {filtersGerne && (
-                            <div className="nav__burger">
-                                <div className="filter-gerne__menu">
-                                    <a href="https://">Жанр 1</a>
-                                    <a href="https://">Жанр 2</a>
-                                    <a href="https://">Жанр 3</a>
-                                    <a href="https://">Жанр 4</a>
-                                    <a href="https://">Жанр 5</a>
-                                    <a href="https://">Жанр 6</a>
-                                    <a href="https://">Жанр 7</a>
-                                    <a href="https://">Жанр 8</a>
-                                    <a href="https://">Жанр 9</a>
-                                    <a href="https://">Жанр 10</a>
-                                    <a href="https://">Жанр 11</a>
-                                </div>
-                            </div>
+                            <S.FilterGerne>
+                                <S.FilterGerneMenu>
+                                    <S.FilterText href="https://">Жанр 1</S.FilterText>
+                                    <S.FilterText href="https://">Жанр 2</S.FilterText>
+                                    <S.FilterText href="https://">Жанр 3</S.FilterText>
+                                    <S.FilterText href="https://">Жанр 4</S.FilterText>
+                                    <S.FilterText href="https://">Жанр 5</S.FilterText>
+                                    <S.FilterText href="https://">Жанр 6</S.FilterText>
+                                    <S.FilterText href="https://">Жанр 7</S.FilterText>
+                                    <S.FilterText href="https://">Жанр 8</S.FilterText>
+                                    <S.FilterText href="https://">Жанр 9</S.FilterText>
+                                    <S.FilterText href="https://">Жанр 10</S.FilterText>
+                                    <S.FilterText href="https://">Жанр 11</S.FilterText>
+                                </S.FilterGerneMenu>
+                            </S.FilterGerne>
                         )}
-        </div>
-        <div className="centerblock__content">
-        <div className="content__title playlist-title">
-            <div className="playlist-title__col col01">Трек</div>
-            <div className="playlist-title__col col02">ИСПОЛНИТЕЛЬ</div>
-            <div className="playlist-title__col col03">АЛЬБОМ</div>
-            <div className="playlist-title__col col04">
-                <svg className="playlist-title__svg" alt="time">
+        </S.HeaderFilterBlock>
+        <S.CenterBlockContent >
+        <S.CenterContentTitle>
+            <S.PlaylistCol1>Трек</S.PlaylistCol1>
+            <S.PlaylistCol2>ИСПОЛНИТЕЛЬ</S.PlaylistCol2>
+            <S.PlaylistCol3>АЛЬБОМ</S.PlaylistCol3>
+            <S.PlaylistCol4>
+                <S.WatchIcon>
                     <IoTimeOutline/>
-                </svg>
-            </div>
-            
-          </div>
-          
-          
-        </div>
+                </S.WatchIcon>
+            </S.PlaylistCol4>
+          </S.CenterContentTitle>
+        </S.CenterBlockContent>
         <HeaderSkeleton/>
-        
-        
-    </div>
+    </S.HeaderCenter>
   )
 }

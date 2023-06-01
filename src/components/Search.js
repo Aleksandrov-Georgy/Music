@@ -1,16 +1,15 @@
-
-import { CiSearch } from "react-icons/ci";
 import Login from "./Login";
+import * as S from '../style';
 
 
 export default function Search() {
   return (
-    <div className="header__nav">
-      <div className="nav__search">
-            <CiSearch style={{width: "14px", height: "14px", color: "white", marginRight: '10px'}}/>
-            <input className="search__text" type="search" placeholder="Поиск" name="search"/>
-      </div>
+    <S.SearchHeaderNav>
+      <S.SearchNavSearch>
+            <S.SearchNavIcon/>
+            <S.SearchInputText type="search" placeholder="Поиск" name="search"/>
+      </S.SearchNavSearch>
       <Login/>
-    </div>
+    </S.SearchHeaderNav>
   )
 }

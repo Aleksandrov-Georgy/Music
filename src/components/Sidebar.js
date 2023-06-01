@@ -1,28 +1,27 @@
-import { HiBars3 } from "react-icons/hi2";
 import { useState } from "react";
+import * as S from '../style';
+
+
 
 export default function Sidebar() {
     // eslint-disable-next-line prefer-const
     let [leftMenu, setLeftMenu] = useState(false);
 
   return (
-    <nav className="nav">
-        
-            <img className="logo__image" src="img/logo.png" alt="logo"/>       
+    <S.Nav>
+            <S.LogoImage src="img/logo.png" alt="logo"/>       
+            <S.BurgerLineIcon onClick={() => {setLeftMenu(leftMenu = !leftMenu)}}/>
 
-            <HiBars3 className="burger__line-icon" onClick={() => {setLeftMenu(leftMenu = !leftMenu)}}/>
-        <div className="nav__burger">
+        <S.NavBurger>
             {leftMenu && (
-                <div className="main__nav">
-                    <ul className="menu__list">
-                        <li className="menu__item"><a href="http://" className="menu__link" >Главное</a></li>
-                        <li className="menu__item"><a href="http://" className="menu__link">Мой плейлист</a></li>
-                        <li className="menu__item"><a href="http://" className="menu__link">Войти</a></li>
-                    </ul>
-                </div>
+                    <S.MenuList>
+                        <S.MenuItem><S.MenuLink href="http://">Главное</S.MenuLink></S.MenuItem>
+                        <S.MenuItem><S.MenuLink href="http://">Мой плейлист</S.MenuLink></S.MenuItem>
+                        <S.MenuItem><S.MenuLink href="http://">Войти</S.MenuLink></S.MenuItem>
+                    </S.MenuList>
             )}
-        </div>     
-    </nav>
+        </S.NavBurger>     
+    </S.Nav>
   )
 
 
