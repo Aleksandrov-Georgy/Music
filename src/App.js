@@ -1,6 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { createGlobalStyle } from 'styled-components';
 import * as S from './style';
+import './style.css';
 import Search from './components/Search';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header'
@@ -36,15 +37,7 @@ const GlobalStyle = createGlobalStyle`
   ul li {
     list-style: none;
   }
- 
-  
-  @font-face {
-    font-family: 'StratosSkyeng';
-    src: local("StratosSkyeng"), local("StratosSkyeng"), url('./fonts/example/Stratos-Medium.woff2') format("woff2"), url("./fonts/example/Stratos-Medium.woff") format("woff");
-    font-weight: 600;
-    font-style: normal;
-  }
-  
+   
   html,
   body {
     width: 100%;

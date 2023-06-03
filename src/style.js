@@ -2,7 +2,6 @@ import styled, {css} from 'styled-components';
 import { HiBars3 } from "react-icons/hi2";
 import { CiSearch } from "react-icons/ci";
 
-
 export const Wrapper = styled.div`
     width: 100%;
     min-height: 100%;
