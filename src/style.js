@@ -1,6 +1,105 @@
 import styled, {css} from 'styled-components';
 import { HiBars3 } from "react-icons/hi2";
 import { CiSearch } from "react-icons/ci";
+import { IoExitOutline } from "react-icons/io5";
+
+export const Registration = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+`;
+
+export const RegistrationContent = styled.div`
+    width: 366px;
+    height: 439px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+
+`;
+
+export const RegistrationInput = styled.input`
+    width: 278.5px;
+    height: 30px;
+    left: 40.5px;
+    top: 138px;
+    padding-left: 0;
+    border: none;
+    border-bottom: 1px solid #D0CECE;
+    margin-top: 40px;
+
+    ::placeholder{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: #E1E1E1; 
+    }
+`;
+
+export const Button = styled.button`
+        width: 278px;
+        height: 52px;
+        left: 41px;
+        top: 268px;
+        border-radius: 6px;
+        margin-top: 40px;
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+`
+
+export const RegistrationButtonEntry = styled(Button)`
+        background: #580EA2;
+        color: #FFFFFF;
+        transition: all .2s ease;
+
+        :hover {
+            background: #3F007D;
+        }
+        :active{
+            background: #271A58;
+        }
+`
+
+export const RegistrationButton = styled(Button)`
+        background: #FFFFFF;
+        color: #000000;
+        border: 1px solid #D0CECE;
+        transition: all .2s ease;
+
+        :hover {
+            background: #F4F5F6;
+        }
+        :active{
+            background: #D9D9D9;
+        }
+`;
+
+export const RegistrationButtonSign = styled(Button)`
+        background: #FFFFFF;
+        color: #000000;
+        border: 1px solid #D0CECE;
+        transition: all .2s ease;
+
+        :hover {
+            background: #F4F5F6;
+        }
+        :active{
+            background: #D9D9D9;
+        }
+`;
+
+
+
+export const RegistrationLogo = styled.img`
+    margin-top: 43px;
+    width: 140px;
+`;
 
 export const Wrapper = styled.div`
     width: 100%;
@@ -123,6 +222,23 @@ export const SearchNavIcon = styled(CiSearch)`
     height: 14px;
     color: white;
     marginRight: 10px;
+`;
+
+export const ExitButton = styled.div`
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 50px;
+    margin-left: 128px;
+    margin-top: 17px;
+    text-align: center;
+    padding-top: 16px;
+    padding-left: 6px;
+`;
+
+export const ExitIcon = styled(IoExitOutline)`
+    scale: 1.5
 `;
 
 export const SearchInputText = styled.input`
@@ -543,7 +659,7 @@ export const TrackAuthorLink = styled.a`
 `;
 
 export const TrackAlbum= styled.div`
-    width: 245px;
+    width: 280px;
 `;
 
 export const TrackTimeContentSvg = styled.div `
@@ -603,6 +719,7 @@ export const SidebarList = styled.div`
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    gap: 30px;
 `;
 
 export const SidebarItem = styled.div`

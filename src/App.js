@@ -1,11 +1,13 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { createGlobalStyle } from 'styled-components';
+
 import * as S from './style';
 import './style.css';
-import Search from './components/Search';
-import Sidebar from './components/Sidebar';
-import Header from './components/Header'
-import Bar from './components/Bar';
+// import Search from './components/Search';
+// import Sidebar from './components/Sidebar';
+// import Header from './components/Header'
+// import Bar from './components/Bar';
+import { AppRoutes } from './routes';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -54,16 +56,17 @@ function App() {
       <GlobalStyle/>  
         <S.Wrapper>
           <S.Container>
-              <S.Main>
+            <AppRoutes/>
+              {/* <S.Main>
                 <Sidebar/>
-                <S.MainCenterblock>
+                {/* <S.MainCenterblock>
                   <Search/>
                   <Header/>
-                </S.MainCenterblock>
+                </S.MainCenterblock> */}
                   {/* <Login/> */}
-              </S.Main>
+              {/* </S.Main>  */}
             </S.Container>
-          <Bar/>
+          {/* <Bar/> */}
       </S.Wrapper>
     </>
   );
