@@ -187,7 +187,7 @@ export function PlaylistOfTheDay() {
                                         </S.TrackAlbum>
                                         <S.TrackTimeContent>
                                             <S.TrackTimeContentSvg alt="time">
-                                                {/* <use xlink:href="img/icon/sprite.svg#icon-like"></use> */}
+                                                {/* <use href="img/icon/sprite.svg#icon-like"/> */}
                                             </S.TrackTimeContentSvg>
                                             <S.TrackTimeContent>4:44</S.TrackTimeContent>
                                         </S.TrackTimeContent>

@@ -28,7 +28,7 @@ function Registration() {
     }
 
     // eslint-disable-next-line prefer-const
-    let [button, setButton] = useState('');
+    const [button, setButton] = useState('');
   
 
     return (
@@ -40,7 +40,7 @@ function Registration() {
                     <S.RegistrationInput ref={textPass} type="password" placeholder="Пароль"/>
                     <S.RegistrationInput ref={textPassDouble}  type="password" placeholder="Повторите пароль"/>
 
-                    <button onClick={() => {setButton(button = !button)}}>{button ? 'зарегистрирован' : 'не зарегистрирован'}</button>
+                    <button onClick={() => {setButton(!button)}}>{button ? 'зарегистрирован' : 'не зарегистрирован'}</button>
                     {button && 
                         <Link to='/'>
                             <S.RegistrationButtonSign type='button' onClick={() => {SignIn()}} >Зарегистрироваться</S.RegistrationButtonSign>

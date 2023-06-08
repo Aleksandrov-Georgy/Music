@@ -5,13 +5,12 @@ import * as S from '../style';
 
 
 export default function Sidebar() {
-    // eslint-disable-next-line prefer-const
-    let [leftMenu, setLeftMenu] = useState(false);
+    const [leftMenu, setLeftMenu] = useState(false);
 
   return (
     <S.Nav>
             <S.LogoImage src="img/logo.png" alt="logo"/>       
-            <S.BurgerLineIcon onClick={() => {setLeftMenu(leftMenu = !leftMenu)}}/>
+            <S.BurgerLineIcon onClick={() => {setLeftMenu(!leftMenu)}}/>
 
         <S.NavBurger>
             {leftMenu && (

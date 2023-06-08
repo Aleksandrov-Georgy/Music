@@ -1,7 +1,9 @@
 /* eslint-disable prefer-const */
 // import React from 'react'
+import '../style.css'
 import { useState } from "react";
 import { IoTimeOutline } from "react-icons/io5";
+import Bar from './Bar';
 import HeaderSkeleton from "./Skeleton-loader/HeaderSkeleton";
 import * as S from '../style'
 
@@ -104,6 +106,8 @@ export default function Header() {
           </S.CenterContentTitle>
         </S.CenterBlockContent>
         <HeaderSkeleton/>
+        <Bar/>
+
     </S.HeaderCenter>
   )
 }

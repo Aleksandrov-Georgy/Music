@@ -66,7 +66,6 @@ function App() {
                   {/* <Login/> */}
               {/* </S.Main>  */}
             </S.Container>
-          {/* <Bar/> */}
       </S.Wrapper>
     </>
   );

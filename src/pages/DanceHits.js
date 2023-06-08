@@ -2,6 +2,7 @@
 import { IoTimeOutline } from "react-icons/io5";
 import Search from '../components/Search';
 import Sidebar from '../components/Sidebar';
+import Bar from "../components/Bar";
 
 import * as S from '../style';
 
@@ -198,6 +199,8 @@ export function DanceHits() {
                         </S.TrackList>
                     </S.MainCenterblock>
                 </S.Main>
+          <Bar/>
+
             </S.HeaderCenter>
         </S.Container>
         </S.Wrapper>
