@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'StratosSkyeng';
+    src: local("StratosSkyeng"), local("StratosSkyeng"), url('./fonts/example/Stratos-Medium.woff2') format("woff2"), url("./fonts/example/Stratos-Medium.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+  }
