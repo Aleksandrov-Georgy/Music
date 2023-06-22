@@ -3,6 +3,22 @@ import { HiBars3 } from "react-icons/hi2";
 import { CiSearch } from "react-icons/ci";
 import { IoExitOutline } from "react-icons/io5";
 
+export const Color = css`
+    
+    color: #FFFFFF;
+`;
+
+export const Background = css`
+    background: #181818;
+`;
+
+export const BackgroundSidebar = css`
+    background: #1C1C1C;
+`;
+
+
+
+
 export const Registration = styled.div`
     display: flex;
     justify-content: center;
@@ -105,18 +121,27 @@ export const Wrapper = styled.div`
     width: 100%;
     min-height: 100%;
     overflow: hidden;
-    background-color: #383838;
+    ${Background}
 `;
+
+
 
 export const Container = styled.div`
     max-width: 1920px;
     height: 100vh;
     margin: 0 auto;
     position: relative;
-    background-color: #181818;
+    ${Color};
+    ${Background}
 `;
 
 export const Main = styled.main`
+ max-width: 1920px;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    ${Color};
+    ${Background}
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
@@ -135,7 +160,9 @@ export const Nav = styled.div`
     padding-left: 36px;
     width: 244px;
     height: 100vh;
-    background-color: #1c1c1c;
+    ${BackgroundSidebar}
+
+
 `;
 
 export const LogoImage = styled.img`
@@ -149,14 +176,15 @@ export const LogoImage = styled.img`
 export const BurgerLineIcon = styled(HiBars3)`
     
 scale: 2;
-color: #FFFFFF;
+${Color};
 margin-left: 5px;
 cursor: pointer;
 margin-top: 66px;
 position: fixed;
-transition: all 200ms ease;
+
+transition: all 300ms ease;
 :hover {
-    scale: 2.3;
+    scale: 2.5
 }
 `;
 
@@ -174,6 +202,8 @@ export const NavBurger = styled.div`
             justify-content: space-between;
 
     cursor: pointer;
+
+
 `;
 
 export const MenuList = styled.ul`
@@ -186,8 +216,15 @@ export const MenuItem = styled.li`
     margin-bottom: 16px;
 `;
 
+export const Theme = styled.div`
+width: 100px;
+height: 100px;
+`;
+
+
+  
 export const MenuLink = styled.a`
-    color: #FFFFFF;
+    ${Color};
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -220,16 +257,17 @@ export const SearchNavSearch = styled.div`
 export const SearchNavIcon = styled(CiSearch)`
     width: 14px;
     height: 14px;
-    color: white;
+    ${Color};
     marginRight: 10px;
 `;
 
 export const ExitButton = styled.div`
     width: 50px;
     height: 50px;
-    border: 1px solid white;
-    color: white;
-    border-radius: 50px;
+    border: 1px solid;
+    border-color: ${Color};
+    ${Color};
+    border-radius: 50%;
     margin-left: 128px;
     margin-top: 17px;
     text-align: center;
@@ -253,12 +291,12 @@ export const SearchInputText = styled.input`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #FFFFFF;
+    ${Color};
   
   
   ::-webkit-input-placeholder {
     background-color: transparent;
-    color: #FFFFFF;
+    ${Color};
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -267,7 +305,7 @@ export const SearchInputText = styled.input`
   
   :-ms-input-placeholder {
     background-color: transparent;
-    color: #FFFFFF;
+    ${Color};
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -276,7 +314,7 @@ export const SearchInputText = styled.input`
   
   ::-ms-input-placeholder {
     background-color: transparent;
-    color: #FFFFFF;
+    ${Color};
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -285,7 +323,7 @@ export const SearchInputText = styled.input`
   
   ::placeholder {
     background-color: transparent;
-    color: #FFFFFF;
+    ${Color};
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -303,7 +341,7 @@ export const HeaderCenterblockText = styled.h2`
     line-height: 64px;
     letter-spacing: -0.013em;
     font-feature-settings: 'pnum' on, 'lnum' on;
-    color: #FFFFFF;
+    ${Color};
     margin: 50px 0 50px 0;
 `;
 
@@ -327,7 +365,7 @@ export const HeaderFilterTitle = styled.div`
     font-size: 16px;
     line-height: 24px;
     margin-right: 15px;
-    color: #FFFFFF;
+    ${Color};
 `;
 
 export const FilterButton = styled.button`
@@ -338,7 +376,7 @@ export const FilterButton = styled.button`
     border: 1px solid #FFFFFF;
     border-radius: 60px;
     padding: 6px 20px;
-    color: #ffffff;
+    ${Color};
     background-color: transparent;
   
     :not(:last-child) {
@@ -371,6 +409,7 @@ export const HeaderFilterMenu = styled.div`
     ::-webkit-scrollbar {
         width: 4px;
         background-color: #4B4949;
+        border-radius: 10px;
     }
   
   ::-webkit-scrollbar-thumb {
@@ -382,25 +421,23 @@ export const HeaderFilterMenu = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 34px;
     gap: 10px;
-
     position: absolute;
     height: 305px;
     left: 440px;
     top: 315px;
-    padding: 20px;
-
-    background: #313131;
+    padding-right: 15px;
+    background: rgb(49, 49, 49);
     border-radius: 12px;
-    overflow-y: scroll;  
+    overflow-y: scroll;
+    border: 34px solid transparent;
 `;
 
 export const FilterText = styled.a`
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    color: #FFFFFF;
+    ${Color};
     flex: none;
     order: 1;
     flex-grow: 0;
@@ -410,22 +447,23 @@ export const FilterYears = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 34px;
     gap: 10px;
 
     position: absolute;
     height: 305px;
     left: 590px;
     top: 315px;
-    padding: 20px;
 
-    background: #313131;
+    padding-right: 15px;
+    background: rgb(49, 49, 49);
     border-radius: 12px;
     overflow-y: scroll;
+    border: 34px solid transparent;
 
     ::-webkit-scrollbar {
         width: 4px;
         background-color: #4B4949;
+        border-radius: 10px
     }
   
   ::-webkit-scrollbar-thumb {
@@ -453,6 +491,8 @@ export const FilterGerneMenu = styled.div`
     ::-webkit-scrollbar {
         width: 4px;
         background-color: #4B4949;
+        border-radius: 10px
+
     }
   
     ::-webkit-scrollbar-thumb {
@@ -470,18 +510,18 @@ export const FilterGerneMenu = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 34px;
     gap: 10px;
 
     position: absolute;
     height: 305px;
     left: 740px;
     top: 315px;
-    padding: 20px;
+    padding-right: 15px;
 
     background: #313131;
     border-radius: 12px;
     overflow-y: scroll;
+    border: 34px solid transparent;
 `;
 
 export const CenterBlockContent = styled.div`
@@ -629,7 +669,7 @@ export const TrackBoxTitleLink = styled.a`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #FFFFFF;
+    ${Color};
 `;
 
 
@@ -638,7 +678,7 @@ export const TrackBoxTitleSpan = styled.span`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #4E4E4E;
+    ${Color};
 `;
 export const TrackAuthor = styled.div`
     width: 321px;
@@ -654,7 +694,7 @@ export const TrackAuthorLink = styled.a`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #FFFFFF;
+    ${Color};
     text-align: left;
 `;
 
@@ -672,7 +712,7 @@ export const TrackAlbumLink = styled.a`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #696969;
+    ${Color};
 `;
 export const TrackTime = styled.div``;
 
@@ -690,7 +730,7 @@ export const TrackTimeContent = styled.span`
     font-size: 16px;
     line-height: 24px;
     text-align: right;
-    color: #696969;
+    ${Color};
 `;
 
 export const SidebarBlock = styled.div`
@@ -922,7 +962,7 @@ export const TrackAuthorLinkBar = styled.a`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #FFFFFF;
+    ${Color};
     white-space: nowrap;
 `
 export const TrackAlbumBar = styled.div`
@@ -936,7 +976,7 @@ export const TrackAlbumLinkBar = styled.a`
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
-  color: #FFFFFF;
+  ${Color};
 `
 
 export const TrackPlayLikeDislike = styled.div`

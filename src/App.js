@@ -1,13 +1,9 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { createGlobalStyle } from 'styled-components';
-
 import * as S from './style';
 import './style.css';
-// import Search from './components/Search';
-// import Sidebar from './components/Sidebar';
-// import Header from './components/Header'
-// import Bar from './components/Bar';
 import { AppRoutes } from './routes';
+
+
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -16,6 +12,11 @@ const GlobalStyle = createGlobalStyle`
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+
+  a {
+    color: inherit;
+  }
+  
   
   *:before,
   *:after {
@@ -45,29 +46,23 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100vh;
     font-family: 'StratosSkyeng', sans-serif;
-    background-color: #383838;
   }
-`
+`;
+
+
 
 function App() {
 
-  return (
-    <>
-      <GlobalStyle/>  
-        <S.Wrapper>
-          <S.Container>
-            <AppRoutes/>
-              {/* <S.Main>
-                <Sidebar/>
-                {/* <S.MainCenterblock>
-                  <Search/>
-                  <Header/>
-                </S.MainCenterblock> */}
-                  {/* <Login/> */}
-              {/* </S.Main>  */}
-            </S.Container>
-      </S.Wrapper>
-    </>
+    return (    
+        
+<>
+<GlobalStyle />
+  <S.Wrapper>
+  <S.Container>
+  <AppRoutes />
+</S.Container>
+</S.Wrapper></>
+     
   );
 }
  
