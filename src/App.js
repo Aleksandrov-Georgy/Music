@@ -1,9 +1,23 @@
+import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import * as S from './style';
-import './style.css';
+// eslint-disable-next-line import/no-cycle
 import { AppRoutes } from './routes';
+import './style.css';
 
 
+ export const ThemeContext = React.createContext({})
+
+const color = {
+  leight: {
+    color: 'black',
+    background: 'white',
+  },
+  dark: {
+    color: 'white',
+    background: 'black',
+  },
+}
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -49,19 +63,20 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-
-
 function App() {
-
+  
     return (    
         
-<>
-<GlobalStyle />
-  <S.Wrapper>
-  <S.Container>
-  <AppRoutes />
-</S.Container>
-</S.Wrapper></>
+
+<ThemeContext.Provider value={color}>
+  <GlobalStyle />
+    <S.Wrapper>
+      <S.Container>
+        <AppRoutes />
+    </S.Container>
+  </S.Wrapper>
+</ThemeContext.Provider>
+
      
   );
 }

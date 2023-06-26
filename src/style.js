@@ -3,9 +3,11 @@ import { HiBars3 } from "react-icons/hi2";
 import { CiSearch } from "react-icons/ci";
 import { IoExitOutline } from "react-icons/io5";
 
-export const Color = css`
-    
-    color: #FFFFFF;
+
+
+
+export const Color = css`  
+    color:  #FFFFFF;
 `;
 
 export const Background = css`
@@ -122,6 +124,7 @@ export const Wrapper = styled.div`
     min-height: 100%;
     overflow: hidden;
     ${Background}
+    ${Color}
 `;
 
 
@@ -131,8 +134,8 @@ export const Container = styled.div`
     height: 100vh;
     margin: 0 auto;
     position: relative;
-    ${Color};
-    ${Background}
+    ${'' /* ${Color};
+    ${Background} */}
 `;
 
 export const Main = styled.main`
@@ -140,8 +143,8 @@ export const Main = styled.main`
     height: 100vh;
     margin: 0 auto;
     position: relative;
-    ${Color};
-    ${Background}
+    ${'' /* ${Color}; */}
+    ${'' /* ${Background} */}
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
@@ -266,7 +269,7 @@ export const ExitButton = styled.div`
     height: 50px;
     border: 1px solid;
     border-color: ${Color};
-    ${Color};
+    ${'' /* ${Color}; */}
     border-radius: 50%;
     margin-left: 128px;
     margin-top: 17px;
@@ -291,12 +294,12 @@ export const SearchInputText = styled.input`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    ${Color};
+    ${'' /* ${Color}; */}
   
   
   ::-webkit-input-placeholder {
     background-color: transparent;
-    ${Color};
+    ${'' /* ${Color}; */}
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -305,7 +308,7 @@ export const SearchInputText = styled.input`
   
   :-ms-input-placeholder {
     background-color: transparent;
-    ${Color};
+    ${'' /* ${Color}; */}
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -314,7 +317,7 @@ export const SearchInputText = styled.input`
   
   ::-ms-input-placeholder {
     background-color: transparent;
-    ${Color};
+    ${'' /* ${Color}; */}
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -323,7 +326,7 @@ export const SearchInputText = styled.input`
   
   ::placeholder {
     background-color: transparent;
-    ${Color};
+    ${'' /* ${Color}; */}
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -341,7 +344,7 @@ export const HeaderCenterblockText = styled.h2`
     line-height: 64px;
     letter-spacing: -0.013em;
     font-feature-settings: 'pnum' on, 'lnum' on;
-    ${Color};
+    ${'' /* ${Color}; */}
     margin: 50px 0 50px 0;
 `;
 
@@ -376,7 +379,8 @@ export const FilterButton = styled.button`
     border: 1px solid #FFFFFF;
     border-radius: 60px;
     padding: 6px 20px;
-    ${Color};
+    color: inherit;
+    ${'' /* ${Color}; */}
     background-color: transparent;
   
     :not(:last-child) {
@@ -437,7 +441,7 @@ export const FilterText = styled.a`
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    ${Color};
+    ${'' /* ${Color}; */}
     flex: none;
     order: 1;
     flex-grow: 0;
@@ -694,7 +698,7 @@ export const TrackAuthorLink = styled.a`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    ${Color};
+    ${'' /* ${Color}; */}
     text-align: left;
 `;
 
@@ -712,7 +716,7 @@ export const TrackAlbumLink = styled.a`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    ${Color};
+    ${'' /* ${Color}; */}
 `;
 export const TrackTime = styled.div``;
 
@@ -730,7 +734,7 @@ export const TrackTimeContent = styled.span`
     font-size: 16px;
     line-height: 24px;
     text-align: right;
-    ${Color};
+    ${'' /* ${Color}; */}
 `;
 
 export const SidebarBlock = styled.div`
@@ -976,7 +980,7 @@ export const TrackAlbumLinkBar = styled.a`
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
-  ${Color};
+  ${'' /* ${Color}; */}
 `
 
 export const TrackPlayLikeDislike = styled.div`
