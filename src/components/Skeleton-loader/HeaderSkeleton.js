@@ -1,11 +1,10 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import TrackList from "../TrackList";
 
 import SkeletonTrackList from "./Skeleton-TrackList";
 
 function HeaderSkeleton() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = React.useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 3000);

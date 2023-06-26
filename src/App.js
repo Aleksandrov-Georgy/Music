@@ -1,13 +1,23 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
+import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-
 import * as S from './style';
-import './style.css';
-// import Search from './components/Search';
-// import Sidebar from './components/Sidebar';
-// import Header from './components/Header'
-// import Bar from './components/Bar';
+// eslint-disable-next-line import/no-cycle
 import { AppRoutes } from './routes';
+import './style.css';
+
+
+ export const ThemeContext = React.createContext({})
+
+const color = {
+  leight: {
+    color: 'black',
+    background: 'white',
+  },
+  dark: {
+    color: 'white',
+    background: 'black',
+  },
+}
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -16,6 +26,11 @@ const GlobalStyle = createGlobalStyle`
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+
+  a {
+    color: inherit;
+  }
+  
   
   *:before,
   *:after {
@@ -45,29 +60,24 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100vh;
     font-family: 'StratosSkyeng', sans-serif;
-    background-color: #383838;
   }
-`
+`;
 
 function App() {
+  
+    return (    
+        
 
-  return (
-    <>
-      <GlobalStyle/>  
-        <S.Wrapper>
-          <S.Container>
-            <AppRoutes/>
-              {/* <S.Main>
-                <Sidebar/>
-                {/* <S.MainCenterblock>
-                  <Search/>
-                  <Header/>
-                </S.MainCenterblock> */}
-                  {/* <Login/> */}
-              {/* </S.Main>  */}
-            </S.Container>
-      </S.Wrapper>
-    </>
+<ThemeContext.Provider value={color}>
+  <GlobalStyle />
+    <S.Wrapper>
+      <S.Container>
+        <AppRoutes />
+    </S.Container>
+  </S.Wrapper>
+</ThemeContext.Provider>
+
+     
   );
 }
  

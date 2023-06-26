@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+// eslint-disable-next-line import/no-cycle
 import { Main } from "./pages/Main";
 import Welcome from "./pages/Welcome";
 import Registration from "./pages/Registration";
