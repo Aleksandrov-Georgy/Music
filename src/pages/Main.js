@@ -9,11 +9,10 @@ export function Main() {
    
 
     return(
-        
             <S.Main >
                 <Sidebar />
                 <S.MainCenterblock>
-                    <Search />9
+                    <Search />
                     <Header />
                 </S.MainCenterblock>
             {/* <Login/> */}

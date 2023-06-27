@@ -1,6 +1,7 @@
 
 import { IoTimeOutline } from "react-icons/io5";
 import Search from '../components/Search';
+// eslint-disable-next-line import/no-cycle
 import Sidebar from '../components/Sidebar';
 
 import * as S from '../style';

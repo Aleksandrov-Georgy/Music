@@ -1,27 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // eslint-disable-next-line import/no-cycle
-import {ThemeContext} from '../App';
+import {ColorTheme} from "./Context";
 import  * as S from '../style';
+
+
 
 export default function Sidebar() {
 
   const [leftMenu, setLeftMenu] = React.useState(false);
-  const [theme, setTheme] = React.useState(false);
+  const [themeImg, setThemeImg] = React.useState(false);
+  const {theme, setTheme} = React.useContext(ColorTheme);
 
-  const context = React.useContext(ThemeContext);
-
-    const replaceTheTheme = () => {
-      setTheme(!theme)
-
-      if(!theme) {
-        console.log(context.dark)
-      } else {
-        console.log(context.leight)
-      }       
-     
-
-    }
+  const replaceTheTheme = () => {
+    setThemeImg(!themeImg);
+    setTheme(!theme);     
+  }
     
 
   return (
@@ -36,7 +30,7 @@ export default function Sidebar() {
               {leftMenu && (
                 <S.MenuList>
                   <Link to='/'>
-                    <S.MenuItem ><S.MenuLink href="http://">Главное</S.MenuLink></S.MenuItem>
+                    <S.MenuItem><S.MenuLink href="http://">Главное</S.MenuLink></S.MenuItem>
                   </Link>
                   <Link to='/mytracks'>
                     <S.MenuItem><S.MenuLink href="http://">Мой плейлист</S.MenuLink></S.MenuItem>
@@ -45,10 +39,10 @@ export default function Sidebar() {
                     <S.MenuItem><S.MenuLink href="http://">Войти</S.MenuLink></S.MenuItem>
                   </Link>
                       <S.Theme onClick={replaceTheTheme}> 
-                            {!theme ? (
-                                  <img src="img\icon\BlackTheme.svg"  alt="theme"/>
-                                  ) : (
-                                  <img src="img\icon\WhiteTheme.svg"  alt="theme"/>
+                            {!themeImg ? (
+                                <img style={{'background': 'rgb(28, 28, 28)'}} src="img\icon\BlackTheme.svg"  alt="theme"/>
+                                ) : (
+                                <img src="img\icon\WhiteTheme.svg"  alt="theme"/>
                               )}
                       </S.Theme>
                 

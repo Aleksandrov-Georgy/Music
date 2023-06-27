@@ -3,23 +3,16 @@ import { HiBars3 } from "react-icons/hi2";
 import { CiSearch } from "react-icons/ci";
 import { IoExitOutline } from "react-icons/io5";
 
-
-
-
-export const Color = css`  
-    color:  #FFFFFF;
-`;
-
-export const Background = css`
-    background: #181818;
-`;
-
 export const BackgroundSidebar = css`
     background: #1C1C1C;
 `;
 
-
-
+// export const Color = css`
+//     color: white;
+// `
+// export const Background = css`
+//     background: black;
+// `
 
 export const Registration = styled.div`
     display: flex;
@@ -119,12 +112,22 @@ export const RegistrationLogo = styled.img`
     width: 140px;
 `;
 
+// export const DarkTheme = styled.css`
+//     color: white;
+//     background: black;
+// `
+
+// export const LeightTheme = styled.css`
+//     color: black;
+//     background: white;
+// `;
+
 export const Wrapper = styled.div`
     width: 100%;
     min-height: 100%;
     overflow: hidden;
-    ${Background}
-    ${Color}
+    ${'' /* ${Background}
+    ${Color} */}
 `;
 
 
@@ -163,7 +166,7 @@ export const Nav = styled.div`
     padding-left: 36px;
     width: 244px;
     height: 100vh;
-    ${BackgroundSidebar}
+    background: rgb(28, 28, 28);
 
 
 `;
@@ -174,17 +177,18 @@ export const LogoImage = styled.img`
     color: #181818;
     margin-right: 150px;
     position: fixed;
+    background: rgb(28, 28, 28);
 `;
 
 export const BurgerLineIcon = styled(HiBars3)`
     
 scale: 2;
-${Color};
+${'' /* ${Color}; */}
 margin-left: 5px;
 cursor: pointer;
 margin-top: 66px;
 position: fixed;
-
+background: rgb(28, 28, 28);
 transition: all 300ms ease;
 :hover {
     scale: 2.5
@@ -192,10 +196,9 @@ transition: all 300ms ease;
 `;
 
 export const NavBurger = styled.div`
-    width: 20px;
+    width: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -212,22 +215,25 @@ export const NavBurger = styled.div`
 export const MenuList = styled.ul`
     padding: 18px 0 10px 0;
     margin-top: 100px;
+    background: rgb(28, 28, 28);
 `;
 
 export const MenuItem = styled.li`
     padding: 5px 0;
     margin-bottom: 16px;
+    background: rgb(28, 28, 28);
 `;
 
 export const Theme = styled.div`
 width: 100px;
 height: 100px;
+background: rgb(28, 28, 28);
 `;
 
 
   
 export const MenuLink = styled.a`
-    ${Color};
+    ${'' /* ${Color}; */}
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -260,7 +266,7 @@ export const SearchNavSearch = styled.div`
 export const SearchNavIcon = styled(CiSearch)`
     width: 14px;
     height: 14px;
-    ${Color};
+    ${'' /* ${Color}; */}
     marginRight: 10px;
 `;
 
@@ -268,7 +274,8 @@ export const ExitButton = styled.div`
     width: 50px;
     height: 50px;
     border: 1px solid;
-    border-color: ${Color};
+    border-color: inherit;
+    ${'' /* border-color: ${Color}; */}
     ${'' /* ${Color}; */}
     border-radius: 50%;
     margin-left: 128px;
@@ -368,7 +375,7 @@ export const HeaderFilterTitle = styled.div`
     font-size: 16px;
     line-height: 24px;
     margin-right: 15px;
-    ${Color};
+    ${'' /* ${Color}; */}
 `;
 
 export const FilterButton = styled.button`
@@ -673,7 +680,7 @@ export const TrackBoxTitleLink = styled.a`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    ${Color};
+    ${'' /* ${Color}; */}
 `;
 
 
@@ -682,7 +689,7 @@ export const TrackBoxTitleSpan = styled.span`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    ${Color};
+    ${'' /* ${Color}; */}
 `;
 export const TrackAuthor = styled.div`
     width: 321px;
@@ -966,7 +973,7 @@ export const TrackAuthorLinkBar = styled.a`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    ${Color};
+    ${'' /* ${Color}; */}
     white-space: nowrap;
 `
 export const TrackAlbumBar = styled.div`
